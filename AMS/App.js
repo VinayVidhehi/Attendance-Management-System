@@ -1,8 +1,8 @@
-import React from 'react';
-import { View } from 'react-native';
-import Home from './Home';
-import Login from './Login';
-import SignUp from './SignUp';
+import React from "react";
+import { View } from "react-native";
+import Home from "./Components/Home";
+import Login from "./Components/Login";
+import SignUp from "./Components/Signup";
 
 const App = () => {
     return (
@@ -12,6 +12,6 @@ const App = () => {
             <SignUp />
         </View>
     );
-}
+};
 
 export default App;

@@ -1,3 +1,5 @@
+import {Viev, Text, StyleSheet, Image, TouchableOpacity, ScrollView, Dimensions, Alert} from 'react-native';
+
 const Signup = () => {
     return (
         <View style={styles.container}>
