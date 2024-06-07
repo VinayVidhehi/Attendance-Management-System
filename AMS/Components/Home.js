@@ -10,7 +10,7 @@ const Home =() => {
      Navigation.navigate("Captureimage");
   }
   return (
-    <View style={{marginTop:26, flex:1, alignItems:'center', justifyContent:'flex-start', backgroundColor:"#ddd"}}>
+    <View style={{flex:1, alignItems:'center', justifyContent:'flex-start', backgroundColor:"#ddd"}}>
       <Header />
       <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
         <Text style={{color:'gray', textAlign:'center'}}>

@@ -38,7 +38,6 @@ const Login = () => {
 
   const handleLogin = async () => {
     if (fpkey === 0) {
-      console.log("am i here");
       setLoading(1);
       const response = await axios.post(
         "https://ams-server-0djz.onrender.com/login",
@@ -145,9 +144,31 @@ const Login = () => {
               </View>
             </>
           )}
+          {fpkey == 1 && (
+            <Pressable
+              onPress={() => {
+                setFpkey(0);
+                setButtonMessage("Login");
+              }}
+              style={{
+                margin: "auto",
+                paddingVertical: 4,
+                paddingHorizontal: 8,
+                borderColor: "#ff4c24",
+                borderRadius: 5,
+                borderWidth: 1,
+                width: "80%",
+              }}
+            >
+              <Text style={{ textAlign: "center", color: "purple" }}>
+                back to login
+              </Text>
+            </Pressable>
+          )}
           <Pressable
             onPress={handleLogin}
             style={{
+              marginTop: 10,
               backgroundColor: "#ff4c24",
               width: "80%",
               margin: "auto",
@@ -157,7 +178,7 @@ const Login = () => {
               borderRadius: 2,
             }}
           >
-            {loading==1 ? (
+            {loading == 1 ? (
               <ActivityIndicator size="small" color="#ffffff" />
             ) : (
               <Text
@@ -192,7 +213,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     width: "100%",
     backgroundColor: "#ddd",
-    marginTop: 30,
     flex: 1,
     justifyContent: "flex-start",
     alignItems: "center",
